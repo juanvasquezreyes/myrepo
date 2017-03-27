@@ -1,15 +1,26 @@
 {
   "name": "wize-devops",
   "version": "1.0.0",
-  "description": "",
+  "description": "Welcome to the Wize Services Dev Ops challenge. This is the working repository, so feel free to clone, fork, upload in your account anything you see in here (including this README).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "kinduff <abarcadabra@gmail.com>",
-  "license": "ISC",
+  "license": "BSD-2-Clause",
   "dependencies": {
     "express": "^4.13.4",
     "mongoose": "^4.4.5"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juanvasquezreyes/myrepo.git"
+  },
+  "keywords": [
+    "myrepo"
+  ],
+  "bugs": {
+    "url": "https://github.com/juanvasquezreyes/myrepo/issues"
   }
 }
