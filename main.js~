@@ -1,5 +1,8 @@
 /* This is a test 2 */
+<<<<<<< HEAD
 
+=======
+>>>>>>> development
 var express = require('express')
 ,MongoClient = require('mongodb').MongoClient
   , assert = require('assert');
@@ -39,6 +42,7 @@ if (conf.replicaSet) {
 }
 
 app.get('/database', function (req, res) { 
+<<<<<<< HEAD
   var url = 'mongodb://manuelAdmin:changeMe@localhost:27017/test';
 
   MongoClient.connect(url, function (err, db) {
@@ -46,6 +50,16 @@ app.get('/database', function (req, res) {
       console.log('Unable to connect to the mongoDB server. Error:', err);
     } else {     
       console.log('Connection established to', url);
+=======
+  console.log(connectionString);
+  var connectionString = 'mongodb://manuelAdmin:changeMe@localhost:27017/test';
+  console.log(connectionString);
+  MongoClient.connect(connectionString, function (err, db) {
+    if (err) {
+      console.log('Unable to connect to the mongoDB server. Error:', err);
+    } else {     
+      console.log('Connection established to', connectionString);
+>>>>>>> development
 
       var collection = db.collection('restaurants');
 
@@ -69,7 +83,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/health', function (req, res) {
+<<<<<<< HEAD
   res.send('All good');
+=======
+  var sys = require('sys')
+  var exec = require('child_process').exec;
+
+  function puts(error, stdout, stderr) { res.send(stdout) }
+  exec("df", puts);
+>>>>>>> development
 });
 
 app.listen(3000, function () {
